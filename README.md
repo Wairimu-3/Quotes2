@@ -1,27 +1,33 @@
-# Quotes2
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
+
+# Quotes
+### My Quotes, 02/March/2020
+### By **Margaret Kimani**
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Description
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+It is a project about quotes where a user can interact with by adding and removing quotes.A user can also vote on the quote.
 
-## Build
+After giving your vote on the quote you can see how long it has been since the quote was written and the author of the quote.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### project link
 
-## Running unit tests
+https://wairimu-3.github.io/Quotes/
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### known bugs
+There are no known bugs. In case you do encounter any, please contact me.
 
-## Running end-to-end tests
+### Further help
+For furthure help concerning the app,reach out to me through:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
++  Email: kimanimargaret46@gmail.com
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### License
+MIT license
