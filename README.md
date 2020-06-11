@@ -1,7 +1,7 @@
 
 
 # Quotes
-### My Quotes, 02/March/2020
+### My Quotes, 12/June/2020
 ### By **Margaret Kimani**
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
@@ -18,7 +18,7 @@ After giving your vote on the quote you can see how long it has been since the q
 
 ### project link
 
-https://wairimu-3.github.io/Quotes/
+https://wairimu-3.github.io/Quotes2/
 
 ### known bugs
 There are no known bugs. In case you do encounter any, please contact me.
