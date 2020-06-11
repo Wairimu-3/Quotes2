@@ -1,0 +1,82 @@
+<h1 style="color: black; font-family: 'Times New Roman', Times, serif; font-size: 50px; text-align: center; text-shadow: gray; text-decoration: underline;">Royals Quotes</h1>
+<div class="container mr-10">
+  <app-quote-show></app-quote-show>
+</div>
+<br>
+<app-form-to-add (addQuote)="addNewQuote($event)"></app-form-to-add>
+<br>
+<br>
+<br>
+
+<div class="container mr-10" id="recent">
+
+
+  <table class="table table-sm table-light">
+    <thead>
+      <tr>
+        <th scope="col" class="text-white-50">
+          <!-- <img src="./assets/dislike.png" class="img-header float-left" alt="dislike"> -->
+          <h1 class="text-center text-dark"><strong><img src="./assets/dislike.png" class="img-right"
+                alt="quote">Recently Added Quotes
+              <img src="./assets/like.png" class="img-right" alt="quote"></strong></h1>
+          <!-- <img src="./assets/like.png" class="img-header float-right" alt="like"> -->
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <div *ngFor='let quote of quotes;let i = index'>
+
+          <td id="{{i}}"> {{ quote.quote }} {{ quote.mediumDate|date }}
+
+          </td>
+          <img src="./assets.comp.jpg"  alt="img">
+          <td class="blockquote-footer float-right">
+            Author <br> <cite title="Author"> {{ quote.author }} </cite>
+          </td>
+          <img src="./assets/comp.jpg" alt="">
+          <td class="blockquote-footer float-left">
+            Submitter <br> <cite title="Submitter"> {{ quote.submitter }} </cite>
+          </td>
+
+          <app-thumb-up></app-thumb-up>
+          <app-thumb-down></app-thumb-down>
+
+          <button (click)='toggleDetails(i)' class="btn btn-outline-dark m-2" style="font-family: fantasy; color: black; background-color: grey;">Quote Details Or Delete</button>
+
+          <div *ngIf='quote.showDescription'>
+            <app-details *ngIf='quote.showDescription' [quote]='quote' (isComplete)='deleteQuote($event,i)'>
+            </app-details>
+          </div>
+        </div>
+      </tr>
+      <br>
+      <tr>
+        <p *ngIf='quotes.length > 0'><button (click)='showMeMostLiked()' class="btn btn-outline-dark m-2 check">
+            Most Liked quote</button>
+        </p>
+        <div *ngIf='bestQuote && quotes.length > 0' appMostLiked>
+          <div>
+            <h3>Best Quote: {{bestQuote}}</h3>
+            <h3>Votes: {{highestCounter}}</h3>
+          </div>
+        </div>
+        <br>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<footer class="footer">
+  <div class="container align-items-center">
+    <span class="text-center text-white">
+      <h5>Copyrights © 2020</h5>
+    </span>
+  </div>
+  <div class="container-fluid social">
+    <a href="www.twitter.com"><img src="./assets/social_icons/twitter.png"></a>
+    <a href="https://www.facebook.com/maggie.royals.3"><img src="./assets/social_icons/FB.webp" style="height: 50px; width: auto;"></a>
+    <a href="https://www.instagram.com/maggieroyals_/"><img src="./assets/social_icons/IG.png" style="height: 50px; width: auto;"></a>
+    <a href="www.gmail.com"><img src="./assets/social_icons/Gmail.webp" style="height: 50px; width: auto;"></a>
+  </div>
+</footer>

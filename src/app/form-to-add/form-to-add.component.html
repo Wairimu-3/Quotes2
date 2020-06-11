@@ -1,0 +1,57 @@
+<form class="container" id="create" (ngSubmit)='submitQuote()' #formToAdd='ngForm'>
+    <h1 class="text-center text-white"><strong><img src="./assets/left.png" class="img-right" alt="quote"><strong style="font-size: 30px;font-family: fantasy;color: black;">Create a new quote</strong>
+            <img src="./assets/right.png" class="img-right" alt="quote"></strong></h1>
+
+    <div class="row">
+        <div class="col form-group">
+            <label for="Quote" class="text-white"><b>Quote</b> </label>
+            <input type="text" id="quote" required class="form-control" placeholder="Write the quote..."
+                [(ngModel)]="newQuote.quote" name="quote" #quote='ngModel' required>
+            <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
+                <p>This field is required</p>
+            </div>
+        </div>
+
+        <div class="col form-group">
+            <label for="medium  " class="text-white"><b>Date</b></label>
+            <input type='date' id="medium" class="form-control" [(ngModel)]="newQuote.mediumDate" name="mediumDate"
+                rows="3" #mediumDate="ngModel" required>
+            <div [hidden]="mediumDate.valid || mediumDate.pristine" class="alert alert-danger">
+                <p>Date is required</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col form-group">
+            <label for="Author" class="text-white"><b>Author</b></label>
+            <input type="text" id="author" class="form-control" placeholder="Author's name"
+                [(ngModel)]="newQuote.author" name="author" #author="ngModel" required>
+            <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
+                <p>Author's Name is required</p>
+            </div>
+        </div>
+
+        <div class="col form-group">
+            <label for="Submitter" class="text-white"><b>Submitted by:</b></label>
+            <input type="text" id="submitter" class="form-control" placeholder="Submitter's name"
+                [(ngModel)]="newQuote.submitter" name="submitter" #submitter="ngModel" required>
+            <div [hidden]="submitter.valid || submitter.pristine" class="alert alert-danger">
+                <p>Submitter's Name is required</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="Description" class="text-white"><b>Description <em class="text-white-50">*optional</em></b></label>
+        <textarea class="form-control" id="description" placeholder="Expound on the quote and it's history..." rows=""
+            [(ngModel)]="newQuote.description" name="description" #description="ngModel" required></textarea>
+        <div [hidden]="description.valid || description.pristine" class="alert alert-danger">
+            <p>Learn more about the quote</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-light btn-md mt-6">Add My New Quote</button>
+    </div>
+</form>

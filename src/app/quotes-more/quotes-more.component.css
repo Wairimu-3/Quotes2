@@ -1,0 +1,30 @@
+.img {
+    border-radius: 120px;
+    width: 8%;
+    height: 8%;
+}
+
+.img-header {
+    border-radius: 120px;
+    width: 8%;
+}
+
+.img-right {
+    border-radius: 3px;
+    width: 8%;
+}
+
+.img-left {
+    border-radius: 3px;
+    width: 8%;
+}
+
+.social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer{
+    background-color: black;
+}
